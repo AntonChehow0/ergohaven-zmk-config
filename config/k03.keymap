@@ -204,8 +204,7 @@
                 &kp LCMD      &trans    &kp LCTRL      &trans   &trans    &trans  &mo 7            &trans  &kp N0  &trans
             >;
 
-            display-name = "Navigation";
-            sensor-bindings = <&enc_vol>, <&enc_tabbing>;
+            
         };
 
         sym {
