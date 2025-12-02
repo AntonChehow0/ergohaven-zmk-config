@@ -18,6 +18,8 @@
             label = "ENC_UP_DOWN";
             #sensor-binding-cells = <0>;
             bindings = <&kp UP>, <&kp DOWN>;
+
+            tap-ms = <0>;
         };
 
         enc_left_right: enc_left_right {
@@ -25,6 +27,8 @@
             label = "ENC_LEFT_RIGHT";
             #sensor-binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LEFT>;
+
+            tap-ms = <0>;
         };
 
         switch_window: switch_window {
