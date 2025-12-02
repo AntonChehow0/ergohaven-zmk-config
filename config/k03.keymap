@@ -11,6 +11,8 @@
             label = "ENC_VOL";
             #sensor-binding-cells = <0>;
             bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+
+            tap-ms = <0>;
         };
 
         enc_up_down: enc_up_down {
@@ -78,6 +80,15 @@
             label = "SHIFT_TAP_DANSE";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>, <&kp LEFT_SHIFT>;
+        };
+
+        rotate_with_param: rotate_with_param {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ROTATE_WITH_PARAM";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tap-ms = <0>;
         };
     };
 
@@ -169,7 +180,9 @@
             >;
 
             display-name = "Base";
-            sensor-bindings = <&enc_up_down>, <&enc_left_right>;
+            sensor-bindings =
+                <&rotate_with_param UP DOWN>,
+                <&rotate_with_param RIGHT_ARROW LEFT_ARROW>;
         };
 
         mac_os_base {
@@ -181,7 +194,9 @@
                 &kp LCTRL  &trans  &kp LCMD  &mo 3   &trans    &trans  &mo 2   &mo 6   &trans  &change_lang_mac
             >;
 
-            sensor-bindings = <&enc_up_down>, <&enc_left_right>;
+            sensor-bindings =
+                <&rotate_with_param UP DOWN_ARROW>,
+                <&rotate_with_param RIGHT LEFT_ARROW>;
 
             label = "mac_os_base";
         };
@@ -196,12 +211,14 @@
                                     &kp LCMD    &trans             &kp LCTRL         &mo 7          &trans    &trans  &trans     &trans            &trans       &trans
             >;
 
-            sensor-bindings = <&mac_switch_window>, <&switch_tab>;
+            sensor-bindings =
+                <&rotate_with_param LG(TAB) LG(LS(TAB))>,
+                <&rotate_with_param LC(TAB) LC(RS(TAB))>;
         };
 
         nav {
             display-name = "Navigation";
-            sensor-bindings = <&enc_vol>, <&enc_tabbing>;
+            sensor-bindings = <&enc_vol>, <&rotate_with_param TAB LS(TAB)>;
 
             bindings = <
 &kp F1  &kp F2  &kp F3        &kp F4    &kp F5         &kp F6                     &kp F7           &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
@@ -222,7 +239,9 @@
             >;
 
             display-name = "Symbols";
-            sensor-bindings = <&switch_window>, <&switch_tab>;
+            sensor-bindings =
+                <&rotate_with_param LA(TAB) LA(LS(TAB))>,
+                <&rotate_with_param LC(TAB) LC(LS(TAB))>;
         };
 
         en_sym {
@@ -235,7 +254,9 @@
                            &trans      &trans             &trans            &mo 7          &trans    &trans  &trans     &trans            &trans       &trans
             >;
 
-            sensor-bindings = <&switch_window>, <&switch_tab>;
+            sensor-bindings =
+                <&rotate_with_param LA(TAB) LS(LA(TAB))>,
+                <&rotate_with_param LC(TAB) LC(LS(TAB))>;
 
             label = "ESYM";
         };
@@ -250,7 +271,9 @@
                            &trans      &trans             &trans            &mo 7          &trans    &trans  &trans     &trans            &trans       &trans
             >;
 
-            sensor-bindings = <&mac_switch_window>, <&switch_tab>;
+            sensor-bindings =
+                <&rotate_with_param LG(TAB) LG(LS(TAB))>,
+                <&rotate_with_param LC(TAB) LS(LC(TAB))>;
 
             label = "ESMC";
         };
@@ -276,7 +299,9 @@
                       &trans  &trans  &trans  &mo 9   &kp NUMBER_1    &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&game_g_h>, <&game_e_x>;
+            sensor-bindings =
+                <&rotate_with_param G H>,
+                <&rotate_with_param E X>;
 
             label = "Gayms";
         };
@@ -303,7 +328,9 @@
                          &trans     &trans     &trans  &mo 11  &kp NUMBER_1    &kp ENTER  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&game_g_h>, <&game_e_x>;
+            sensor-bindings =
+                <&rotate_with_param G H>,
+                <&rotate_with_param E X>;
         };
 
         Sifu_ext {
