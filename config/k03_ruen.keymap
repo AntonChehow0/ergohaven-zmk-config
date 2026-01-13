@@ -106,6 +106,12 @@
             key-positions = <15 16>;
             layers = <0>;
         };
+
+         dot_slash {
+            bindings = <&dot_slash>;
+            key-positions = <2 3>;
+            layers = <0 1>;
+        };
     };
 
     macros {
@@ -161,6 +167,69 @@
             label = "EN";
             wait-ms = <0>;
             tap-ms = <30>;
+        };
+
+         change_lang: change_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE)>;
+            label = "CHANGE_LANG";
+        };
+
+        dot_slash: dot_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_DOT &kp RU_SLASH>;
+            label = "DOT_SLASH";
+        };
+
+        public_compleate: public_compleate {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp U &kp B &kp L &kp I &kp C &kp SPACE>;
+            label = "PUBLIC_COMPLEATE";
+        };
+
+        private_cmpl: private_cmpl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp R &kp I &kp V &kp A &kp T &kp E &kp SPACE>;
+            label = "PRIVATE_CMPL";
+        };
+
+        static_cmpl: static_cmpl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp T &kp A &kp T &kp I &kp C &kp SPACE>;
+            label = "STATIC_CMPL";
+        };
+
+        import_cmlp: import_cmlp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE>;
+            label = "IMPORT_CMLP";
+        };
+
+        ternary_cmpl: ternary_cmpl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK &kp SPACE &kp SPACE &kp COLON &kp SPACE &kp LEFT &kp LEFT &kp LEFT>;
+            label = "TERNARY_CMPL";
+        };
+
+        in_string_cmpl: in_string_cmpl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH &kp LPAR &kp RPAR &kp LEFT>;
+            label = "IN_STRING_CMPL";
+        };
+
+        change_lang_mac: change_lang_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE)>;
+            label = "CHANGE_LANG_MAC";
         };
     };
 
