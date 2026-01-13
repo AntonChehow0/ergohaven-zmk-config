@@ -12,6 +12,91 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
+
+         enc_vol: enc_vol {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_VOL";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+
+            tap-ms = <0>;
+        };
+
+        enc_up_down: enc_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_UP_DOWN";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp UP>, <&kp DOWN>;
+
+            tap-ms = <0>;
+        };
+
+        enc_left_right: enc_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_LEFT_RIGHT";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LEFT>;
+
+            tap-ms = <0>;
+        };
+
+        switch_window: switch_window {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SWITCH_WINDOW";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LA(TAB)>, <&kp LS(LA(TAB))>;
+        };
+
+        switch_tab: switch_tab {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SWITCH_TAB";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
+        };
+
+        game_g_h: game_g_h {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "GAME_G_H";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp G>, <&kp H>;
+        };
+
+        game_e_x: game_e_x {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "GAME_E_X";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp E>, <&kp X>;
+        };
+
+        mac_switch_window: mac_switch_window {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "MAC_SWITCH_WINDOW";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LG(TAB)>, <&kp LG(LS(TAB))>;
+        };
+
+        enc_tabbing: enc_tabbing {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_TABBING";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp LS(TAB)>;
+        };
+
+        shift_tap_danse: shift_tap_danse {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_TAP_DANSE";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&kp LEFT_SHIFT>;
+        };
+
+        rotate_with_param: rotate_with_param {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ROTATE_WITH_PARAM";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tap-ms = <0>;
+        };
     };
 
     combos {
