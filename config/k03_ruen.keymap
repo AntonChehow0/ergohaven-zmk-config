@@ -338,11 +338,11 @@
 
         games_extension {
             bindings = <
-&kp NUMBER_8  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp M         &kp Z   &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp N1        &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHIFT    &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans  &trans  &trans  &trans  &kp SPACE    &trans  &trans  &trans  &trans  &trans
+&tog 6      &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp M       &kp Z   &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp N1      &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHIFT  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                    &trans  &trans  &trans  &trans  &kp SPACE    &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "GE";
@@ -365,11 +365,11 @@
 
         sifu_extension {
             bindings = <
-&kp NUMBER_8  &kp F1     &kp F2        &kp F3        &kp F4     &kp F5                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp M         &kp N1     &kp NUMBER_2  &kp NUMBER_3  &trans     &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp N1        &kp LC(A)  &kp LC(S)     &kp LC(D)     &kp LCTRL  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHIFT    &trans     &trans        &trans        &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans        &trans        &trans     &trans  &kp SPACE    &trans  &trans  &trans  &trans  &trans
+&tog 8      &kp F1     &kp F2        &kp F3        &kp F4     &kp F5                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp M       &kp N1     &kp NUMBER_2  &kp NUMBER_3  &trans     &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp N1      &kp LC(A)  &kp LC(S)     &kp LC(D)     &kp LCTRL  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHIFT  &trans     &trans        &trans        &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                       &trans        &trans        &trans     &trans  &kp SPACE    &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "sfu_e";
