@@ -297,10 +297,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&en APOS  &kp RU_MINUS        &en RU_DOT  &en RU_COMMA  &en RU_SEMI  &kp RU_COLON                     &trans          &trans         &en CARET    &trans            &trans      &trans
-&trans    &kp RU_QMARK        &en RU_DQT  &kp EQUAL     &en RU_FSLH  &en TILDE                        &trans          &en LBKT       &kp UNDER    &en RBKT          &trans      &trans
-&trans    &en RU_BSLH         &en PIPE    &kp UNDER     &en APOS     &kp CARET                        &kp RU_PERCENT  &en LBRC       &kp RU_SEMI  &en RBRC          &kp EXCL    &kp RU_QUESTION
-&trans    &kp RU_EXCLAMATION  &kp DOLLAR  &kp HASH      &en AT_SIGN  &en AMPERSAND  &trans    &trans  &trans          &en LESS_THAN  &en TILDE    &en GREATER_THAN  &kp RU_DOT  &trans
+&en APOS  &kp RU_MINUS        &kp RU_DOT  &kp RU_COMMA  &kp RU_SEMI  &kp RU_COLON                     &trans          &trans         &en CARET    &trans            &trans      &trans
+&trans    &kp RU_QMARK        &kp RU_DQT  &kp EQUAL     &kp RU_FSLH  &en TILDE                        &trans          &en LBKT       &kp UNDER    &en RBKT          &trans      &trans
+&trans    &en RU_BSLH         &en PIPE    &kp UNDER     &en APOS     &en CARET                        &kp RU_PERCENT  &en LBRC       &kp RU_SEMI  &en RBRC          &kp EXCL    &kp RU_QUESTION
+&trans    &kp RU_EXCLAMATION  &en DOLLAR  &en HASH      &en AT_SIGN  &en AMPERSAND  &trans    &trans  &trans          &en LESS_THAN  &en TILDE    &en GREATER_THAN  &kp RU_DOT  &trans
                               &trans      &trans        &trans       &mo 5          &trans    &trans  &trans          &trans         &trans       &trans
             >;
 
