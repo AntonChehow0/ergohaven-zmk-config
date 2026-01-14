@@ -283,7 +283,7 @@
             bindings = <
 &kp APOS  &kp MINUS  &kp DOT     &kp COMMA      &kp SEMI     &kp LS(SEMI)                     &trans     &trans         &kp CARET  &trans            &trans    &trans
 &trans    &kp QMARK  &kp DQT     &kp EQUAL      &kp FSLH     &kp LS(GRAVE)                    &trans     &kp LBKT       &kp UNDER  &kp RBKT          &trans    &trans
-&trans    &kp BSLH   &kp PIPE    &kp LS(MINUS)  &kp APOS     &kp CARET                        &kp PRCNT  &kp LBRC       &kp SEMI   &kp RBRC          &kp EXCL  &kp QUESTION
+&trans    &kp BSLH   &kp PIPE    &kp LS(MINUS)  &kp APOS     &kp CARET                        &kp PRCNT  &kp LBRC       &kp PLUS   &kp RBRC          &kp EXCL  &kp QUESTION
 &trans    &kp EXCL   &kp DOLLAR  &kp HASH       &kp AT_SIGN  &kp AMPERSAND  &trans    &trans  &trans     &kp LESS_THAN  &kp TILDE  &kp GREATER_THAN  &kp DOT   &trans
                      &trans      &trans         &trans       &mo 5          &trans    &trans  &trans     &trans         &trans     &trans
             >;
@@ -297,11 +297,11 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&en APOS  &kp RU_MINUS        &kp RU_DOT  &kp RU_COMMA  &kp RU_SEMI  &kp RU_COLON                     &trans          &trans         &en CARET    &trans            &trans      &trans
-&trans    &kp RU_QMARK        &kp RU_DQT  &kp EQUAL     &kp RU_FSLH  &en TILDE                        &trans          &en LBKT       &kp UNDER    &en RBKT          &trans      &trans
-&trans    &en RU_BSLH         &en PIPE    &kp UNDER     &en APOS     &en CARET                        &kp RU_PERCENT  &en LBRC       &kp RU_SEMI  &en RBRC          &kp EXCL    &kp RU_QUESTION
-&trans    &kp RU_EXCLAMATION  &en DOLLAR  &en HASH      &en AT_SIGN  &en AMPERSAND  &trans    &trans  &trans          &en LESS_THAN  &en TILDE    &en GREATER_THAN  &kp RU_DOT  &trans
-                              &trans      &trans        &trans       &mo 5          &trans    &trans  &trans          &trans         &trans       &trans
+&en APOS  &kp RU_MINUS        &kp RU_DOT  &kp RU_COMMA  &kp RU_SEMI  &kp RU_COLON                     &trans          &trans         &en CARET  &trans            &trans      &trans
+&trans    &kp RU_QMARK        &kp RU_DQT  &kp EQUAL     &kp RU_FSLH  &en TILDE                        &trans          &en LBKT       &kp UNDER  &en RBKT          &trans      &trans
+&trans    &en RU_BSLH         &en PIPE    &kp UNDER     &en APOS     &en CARET                        &kp RU_PERCENT  &en LBRC       &kp PLUS   &en RBRC          &kp EXCL    &kp RU_QUESTION
+&trans    &kp RU_EXCLAMATION  &en DOLLAR  &en HASH      &en AT_SIGN  &en AMPERSAND  &trans    &trans  &trans          &en LESS_THAN  &en TILDE  &en GREATER_THAN  &kp RU_DOT  &trans
+                              &trans      &trans        &trans       &mo 5          &trans    &trans  &trans          &trans         &trans     &trans
             >;
 
             sensor-bindings =
