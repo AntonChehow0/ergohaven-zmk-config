@@ -251,16 +251,16 @@
         };
 
         layer_ru_mac_tog: layer_ru_mac_tog {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 1 &tog 3>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 1 &tog 3 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "LAYER_RU_MAC_TOG";
         };
 
         layer_en_mac_tog: layer_en_mac_tog {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 0 &tog 2>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &tog 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "LAYER_EN_MAC_TOG";
         };
     };
@@ -300,11 +300,11 @@
 
         mac_en {
             bindings = <
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans             &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans             &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans             &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans             &trans  &trans
-                &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &mo 5   &trans    &trans  &trans  &kp RCMD  &kp RALT  &layer_ru_mac_tog
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans                       &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans                       &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans                       &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans                       &trans  &trans
+                &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &mo 5   &trans    &trans  &trans  &kp RCMD  &kp RALT  &layer_ru_mac_tog LC(SPACE)
             >;
 
             sensor-bindings =
@@ -316,11 +316,11 @@
 
         mac_ru {
             bindings = <
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans             &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans             &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans             &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans             &trans  &trans
-                &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &mo 6   &trans    &trans  &trans  &kp RCMD  &kp RALT  &layer_en_mac_tog
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans                       &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans                       &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans                       &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans                       &trans  &trans
+                &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &mo 6   &trans    &trans  &trans  &kp RCMD  &kp RALT  &layer_en_mac_tog LC(SPACE)
             >;
 
             sensor-bindings =
@@ -332,11 +332,11 @@
 
         mac_sym {
             bindings = <
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans            &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans            &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans            &trans  &trans
-&trans  &trans  &trans     &trans        &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans            &trans  &trans
-                &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &trans  &trans    &trans  &trans  &kp RCMD  &kp RALT  &change_lang_mac
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans  &trans  &trans
+                &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &trans  &trans    &trans  &trans  &kp RCMD  &kp RALT  &trans
             >;
 
             label = "Symbols";
@@ -361,11 +361,11 @@
         nav_mac {
             display-name = "Nav";
             bindings = <
-&kp F1             &kp F2             &kp F3        &kp F4    &kp F5         &kp F6                     &kp F7           &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&to 0              &trans             &kp HOME      &kp UP    &kp END        &kp INS                    &kp PG_UP        &kp N7  &kp N8  &kp N9   &trans   &trans
-&trans             &trans             &kp LEFT      &kp DOWN  &kp RIGHT      &kp RET                    &kp PG_DN        &kp N4  &kp N5  &kp N6   &trans   &trans
-&layer_ru_mac_tog  &layer_en_mac_tog  &kp LC(LEFT)  &kp CAPS  &kp LC(RIGHT)  &kp DEL  &trans    &trans  &kp PRINTSCREEN  &kp N1  &kp N2  &kp N3   &trans   &trans
-                                      &trans        &trans    &trans         &trans   &trans    &trans  &mo 9            &trans  &kp N0  &trans
+&kp F1                   &kp F2                   &kp F3        &kp F4    &kp F5         &kp F6                     &kp F7           &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&to 0                    &trans                   &kp HOME      &kp UP    &kp END        &kp INS                    &kp PG_UP        &kp N7  &kp N8  &kp N9   &trans   &trans
+&trans                   &trans                   &kp LEFT      &kp DOWN  &kp RIGHT      &kp RET                    &kp PG_DN        &kp N4  &kp N5  &kp N6   &trans   &trans
+&layer_ru_mac_tog LCTRL  &layer_en_mac_tog LCTRL  &kp LC(LEFT)  &kp CAPS  &kp LC(RIGHT)  &kp DEL  &trans    &trans  &kp PRINTSCREEN  &kp N1  &kp N2  &kp N3   &trans   &trans
+                                                  &trans        &trans    &trans         &trans   &trans    &trans  &mo 9            &trans  &kp N0  &trans
             >;
 
             sensor-bindings = <&enc_vol>, <&rotate_with_param TAB LS(TAB)>;
