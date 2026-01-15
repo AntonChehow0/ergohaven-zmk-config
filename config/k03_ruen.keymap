@@ -320,7 +320,7 @@
 &trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans             &trans  &trans
 &trans  &trans  &trans     &trans        &trans    &trans                    &trans  &trans    &trans    &trans             &trans  &trans
 &trans  &trans  &trans     &trans        &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans             &trans  &trans
-                &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &trans  &trans    &trans  &trans  &kp RCMD  &kp RALT  &layer_ru_mac_tog
+                &kp LCTRL  &kp LEFT_ALT  &kp LCMD  &trans  &trans    &trans  &trans  &kp RCMD  &kp RALT  &layer_en_mac_tog
             >;
 
             sensor-bindings =
