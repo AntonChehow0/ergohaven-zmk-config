@@ -110,7 +110,13 @@
         dot_slash {
             bindings = <&dot_slash>;
             key-positions = <2 3>;
-            layers = <0 1>;
+            layers = <1>;
+        };
+
+        dot_slash_en {
+            bindings = <&dot_slash_en>;
+            key-positions = <2 3>;
+            layers = <0>;
         };
     };
 
@@ -263,6 +269,13 @@
             bindings = <&to 0 &tog 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "LAYER_EN_MAC_TOG";
         };
+
+        dot_slash_en: dot_slash_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_ru &dot_slash &to_en>;
+            label = "DOT_SLASH_EN";
+        };
     };
 
     keymap {
@@ -286,11 +299,11 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC        &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                                               &kp N6              &kp N7                     &kp N8               &kp N9                 &kp N0               &kp BSPC
-&kp BACKSLASH  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp LEFT_BRACKET
-&kp TAB        &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                                   &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&sk LSHFT      &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp RU_CYRILLIC_HA    &kp RU_CYRILLIC_HARD_SIGN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RIGHT_BRACKET    &kp GRAVE
-                                        &kp LGUI              &kp LALT            &kp LCTRL           &mo 5               &kp SPACE             &kp ENTER                  &mo 8               &kp RCTRL                  &kp RALT             &layer_en_tog
+&kp ESC        &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                      &kp N6              &kp N7                     &kp N8               &kp N9                 &kp N0               &kp BSPC
+&kp BACKSLASH  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp LEFT_BRACKET
+&kp TAB        &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&sk LSHFT      &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp ENTER    &kp K_PP   &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RIGHT_BRACKET    &kp GRAVE
+                                        &kp LGUI              &kp LALT            &kp LCTRL           &mo 5               &kp SPACE    &kp ENTER  &mo 8               &kp RCTRL                  &kp RALT             &layer_en_tog
             >;
 
             sensor-bindings =
