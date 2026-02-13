@@ -87,8 +87,6 @@
             label = "ROTATE_WITH_PARAM";
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-
-            tap-ms = <500>;
         };
     };
 
