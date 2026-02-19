@@ -86,7 +86,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ROTATE_WITH_PARAM";
             #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&delayed_macro>, <&delayed_macro>;
         };
     };
 
@@ -273,6 +273,16 @@
             #binding-cells = <0>;
             bindings = <&to_ru &dot_slash &to_en>;
             label = "DOT_SLASH_EN";
+        };
+
+        delayed_macro: delayed_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "DELAYED_MACRO";
         };
     };
 
